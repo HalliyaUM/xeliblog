@@ -36,11 +36,15 @@ sudo systemctl enable libvirtd (to start service on boot)
 ```
 and WHO SAID THIS WILL INSTALL KVM KERNEL MODULE PROPERLY?!
 MINE DOES NOT INSTALLS IT AHH
-[kvmnotinstalled](./content/image/grepkvm.png)
+![kvmnotinstalled](content/image/grepkvm.png)
 
 Tried 
 h@hs-fedora:~$ egrep -c '(vmx|svm)' /proc/cpuinfo
 0
 so I guess CPU virtualisation feature is not recognised by OS...
 
-#TODO: check SVM mode in fedora BIOS
+TODO: check SVM mode in fedora BIOS
+	![hehe1](content/image/systemsec.HEIC)
+	![hehe2](content/image/vtxenabled.HEIC)
+KA-POW! Found ya.
+Now SVM is enabled.
