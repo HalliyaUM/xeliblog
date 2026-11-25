@@ -39,12 +39,20 @@ MINE DOES NOT INSTALLS IT AHH
 ![kvmnotinstalled](content/image/grepkvm.png)
 
 Tried 
+```
 h@hs-fedora:~$ egrep -c '(vmx|svm)' /proc/cpuinfo
-0
+  0
+```
 so I guess CPU virtualisation feature is not recognised by OS...
 
 TODO: check SVM mode in fedora BIOS
 	![hehe1](content/image/systemsec.HEIC)
 	![hehe2](content/image/vtxenabled.HEIC)
 KA-POW! Found ya.
-Now SVM is enabled.
+Now SVM is enabled & got pretty output.
+
+```
+h@hs-fedora:~/xeliblog/content/image$ egrep -c '(vmx|svm)' /proc/cpuinfo
+  8
+```
+![kvmhere](/content/image/lsmod.png)
